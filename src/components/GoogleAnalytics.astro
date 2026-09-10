@@ -1,0 +1,20 @@
+---
+// Google Analytics 4 — Measurement ID G-Z3P10TX528.
+// Gated to production builds so local dev/preview page views don't pollute the
+// analytics data. The Measurement ID is a public, client-side identifier by
+// design (not a secret). Included in the <head> of every route's shell:
+// src/pages/index.astro (/), src/pages/work/[...slug].astro (/work/*),
+// and src/layouts/BaseLayout.astro (/old).
+const isProd = import.meta.env.PROD;
+---
+{isProd && (
+  <Fragment>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-Z3P10TX528"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z3P10TX528');
+    </script>
+  </Fragment>
+)}

@@ -9,6 +9,7 @@
  * are untouched.
  */
 import '../paper/tokens.css';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 
 // 24 Aug 2026 (mobile queue r2): PencilFrame (an absolutely-positioned overlay
 // frame) retired. On iOS Safari its right rule decoupled from the content and
@@ -32,6 +33,7 @@ const currentYear = new Date().getFullYear();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <GoogleAnalytics />
     <meta name="description" content="Aman Beniwal — strategy generalist and AI builder. Selected AI projects, background, and ways to get in touch." />
     <title>Aman Beniwal</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
